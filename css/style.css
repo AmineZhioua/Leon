@@ -1,0 +1,657 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Header Styling */
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+/* Logo Styling */
+.header .logo {
+    width: 60px;
+}
+
+
+
+
+/* ############################# LINKS STYLING ############################# */
+.header .links {
+    position: relative;
+}
+
+/* Links Icon 2nd Child Hover Effect */
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+/* Header Right Icon Styling */
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.5s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+/* Links List */
+.header .container .links ul {
+    list-style: none;
+    position: absolute;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    right: -19px;
+    top: 42px;
+    display: none;
+    z-index: 1;
+}
+
+/* Links List Hover Effect */
+.header .container .links:hover ul {
+    display: block;
+}
+
+/* Links List Content Styling */
+.header .container ul li {
+    background-color: #f6f6f6;
+    margin-bottom: 1px;
+    padding: 15px;
+}
+
+.header .container ul li a {
+    font-family: "Anta", sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: 0.75s;
+}
+
+
+/* Links List Hover Effect */
+.header .container ul li a:hover {
+    padding: 20px;
+}
+
+/* List Before Styling */
+.header .container ul::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    right: 25px;
+    top: -20px;
+}
+
+
+
+
+/* ############################# LANDING STYLING ############################# */
+.background {
+    background-image: url(../assets/landing.jpg);
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+/* Landing Text */
+.background .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+/* Landing Heading */
+.background .text h1 {
+    color: #10cab7;
+    font-family: "Anta", sans-serif;
+    font-size: 50px;
+}
+
+/* Landing Paragraph */
+.background .text p {
+    color: black;
+    font-family: "Anta", sans-serif;
+    font-size: 19px;
+    line-height: 2.5;
+}
+
+@media (max-width: 599px) {
+    .background .text p {
+        color: black;
+        font-family: "Anta", sans-serif;
+        font-size: 15px;
+        line-height: 2.1;
+    }
+}
+
+
+
+/* ############################# FEATURES SECTION STYLING ############################# */
+.features {
+    background-color: #f6f6f6;
+    padding: 60px;
+}
+
+/* Features Container Grid */
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* Features Feats Styling */
+.features .container .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 699px) {
+    .features .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Feats Icon */
+.features .container .feat i {
+    color: #10cab7;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Feats Heading */
+.features .container .feat h2 {
+    color: black;
+    font-family: "Anta", sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Feats Paragraph */
+.features .container .feat p {
+    color: #575757;
+    font-family: "Anta", sans-serif;
+    line-height: 1.8;
+}
+
+
+
+
+/* ############################# SERVICES SECTION STYLING ############################# */
+.services {
+    padding: 60px;
+}
+
+/* Services Title Styling */
+.services .container .title {
+    text-align: center;
+}
+
+/* Services Heading Title */
+.services .container .title h1 {
+    color: #ebeced;
+    font-size: 100px;
+    font-family: "Anta", sans-serif;
+    font-weight: bolder;
+    margin: 0;
+}
+
+/* Services Paragraph Title */
+.services .container .title p {
+    color: #797979;
+    font-size: 20px;
+    font-family: "Anta", sans-serif;
+    margin: -32px 0;
+}
+
+@media (max-width: 599px) {
+    .services .container .title h1 {
+        font-size: 55px;
+    }
+    .services .container .title p {
+        font-size: 15px;
+    }
+}
+
+/* Services Container Grid */
+.services .container .services-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 120px;
+}
+
+@media (max-width: 1199px) {
+    .services .container .services-section {
+        display: flex;
+        justify-content: center;
+    }
+}
+/* Services Service Styling */
+.services .container .services-section .column .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+    .services .container .services-section {
+        flex-wrap: wrap;
+    }
+    .services .container .services-section .column .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Service Icon */
+.services .container .services-section .column .srv i {
+    color: #10cab7;
+    font-size: 40px;
+}
+
+/* Service Heading */
+.services .container .services-section .column .srv .text h3 {
+    color: black;
+    font-family: "Anta", sans-serif;
+    margin: 0  0 30px 20px;
+}
+
+/* Service Paragraph */
+.services .container .services-section .column .srv .text p {
+    color: #444;
+    font-size: 16px;
+    font-family: "Anta", sans-serif;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+/* Services Class Image Styling */
+.services .container .services-section .column .image img {
+    height: 400px;
+    margin: 0 30px;
+}
+
+@media (max-width: 1199px) {
+    .services .container .services-section .column .image {
+        display: none;
+    }
+}
+
+/* Services Class Image Before Styling */
+.services .container .services-section .column .image::before {
+    content: "";
+    background-color: #2c4755;
+    position: absolute;
+    width: 120px;
+    height: 450px;
+    top: 196%;
+    z-index: -1;
+    right: 150px;
+}
+
+
+
+/* ############################# PORTFOLIO SECTION STYLING ############################# */
+.portfolio {
+    padding: 60px;
+    background-color: #f6f6f6;
+}
+
+/* Portfolio Title Styling */
+.portfolio .container .title {
+    text-align: center;
+}
+
+/* Portfolio Heading Title */
+.portfolio .container .title h1 {
+    color: #ebeced;
+    font-size: 100px;
+    font-family: "Anta", sans-serif;
+    font-weight: bolder;
+    margin: 0;
+}
+
+/* Portfolio Paragraph Title */
+.portfolio .container .title p {
+    color: #797979;
+    font-size: 20px;
+    font-family: "Anta", sans-serif;
+    margin: -32px 0;
+}
+
+@media (max-width: 599px) {
+    .portfolio .container .title h1 {
+        font-size: 60px;
+    }
+    .portfolio .container .title p {
+        font-size: 15px;
+    }
+}
+
+/* Portfolio Section Grid */
+.portfolio .container .portfolio-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+@media (max-width: 899px) {
+    .portfolio .container .portfolio-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Portfolio Project Styling */
+.portfolio .container .portfolio-section .column .project {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-inline: 10px;
+}
+
+/* Portfolio Project Image */
+.portfolio .container .portfolio-section .column .project img {
+    max-width: 100%;
+}
+
+/* Portfolio Project Texts */
+.portfolio .container .portfolio-section .column .project .texts {
+    background-color: white;
+}
+
+/* Portfolio Project Heading */
+.portfolio .container .portfolio-section .column .project .texts h3 {
+    font-family: "Anta", sans-serif;
+    margin: 20px 10px;
+}
+
+/* Portfolio Project Paragraph */
+.portfolio .container .portfolio-section .column .project .texts p {
+    font-family: "Anta", sans-serif;
+    font-size: 15px;
+    color: #797979;
+    margin: 20px 10px;
+}
+
+
+
+
+/* ############################# ABOUT SECTION STYLING ############################# */
+.about {
+    padding: 60px;
+}
+
+/* About Container Styling */
+.about .container {
+    margin: 0 50px;
+}
+
+/* About Title Styling */
+.about .container .title {
+    text-align: center;
+}
+
+/* About Heading Title */
+.about .container .title h1 {
+    color: #ebeced;
+    font-size: 100px;
+    font-family: "Anta", sans-serif;
+    font-weight: bolder;
+    margin: 0;
+}
+
+/* About Paragraph Title */
+.about .container .title p {
+    color: #797979;
+    font-size: 20px;
+    font-family: "Anta", sans-serif;
+    margin: -32px 0;
+}
+
+@media (max-width: 599px) {
+    .about .container .title h1 {
+        font-size: 60px;
+    }
+    .about .container .title p {
+        font-size: 15px;
+    }
+}
+
+/* About Section Container Styling */
+.about .container .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+@media (max-width: 991px) {
+    .about .about-section {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+}
+
+
+/* About Class Image Styling */
+.about .container .about-section .image {
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+/* About Image Size */
+.about .container .about-section .image img {
+    max-width: 100%;
+}
+
+@media (max-width: 991px) {
+    .about .about-section .image {
+      margin: 0 auto 60px;
+    }
+}
+
+/* About Image Before Styling */
+.about .container .about-section .image::before{
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+
+/* About Image After Styling */
+.about .container .about-section .image::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 80%;
+    border-left: 80px solid #10cab7;
+    border-bottom: 80px solid #10cab7;
+    top: -40px;
+    right: -150px;
+    z-index: -1;
+}
+
+@media (max-width: 991px) {
+    .about .about-section .image::before,
+    .about .about-section .image::after {
+      display: none;
+    }
+  }
+
+/* About Section Text Styling */
+.about .container .about-section .text {
+    flex-basis: calc(100% - 500px);
+}
+
+.about .container .about-section .text p:first-of-type {
+    font-family: "Anta", sans-serif;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+.about .container .about-section .text hr {
+    border-color: #10cab7;
+    width: 200px;
+    display: inline-block;
+}
+
+.about .container .about-section .text p:last-of-type {
+    font-family: "Anta", sans-serif;
+    margin-top: 50px;
+    line-height: 2;
+}
+
+
+
+/* ############################# CONTACT SECTION STYLING ############################# */
+.contact {
+    padding: 60px;
+    background-color: #f6f6f6;
+}
+
+/* Contact Section Title */
+.contact .container .title {
+    text-align: center;
+}
+
+/* Contact Heading Title */
+.contact .container .title h1 {
+    color: #ebeced;
+    font-size: 100px;
+    font-family: "Anta", sans-serif;
+    font-weight: bolder;
+    margin: 0;
+}
+
+/* Contact Paragraph Title */
+.contact .container .title p {
+    color: #797979;
+    font-size: 20px;
+    font-family: "Anta", sans-serif;
+    margin: -32px 0;
+}
+
+@media (max-width: 767px){
+    .contact .container .title h1 {
+        font-size: 60px;
+    }
+
+    .contact .container .title p {
+        font-size: 15px;
+    }
+}
+
+/* Contact Section All Links Styling */
+.contact .container .links {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Line Styling */
+.contact .container .links .line {
+    color: #2c4755;
+    font-family: "Anta", sans-serif;
+}
+
+/* Contact Mail Styling */
+.contact .container .links .mail {
+    color: #10cab7;
+    font-family: "Anta", sans-serif;
+    margin-top: 20px;
+}
+
+/* Social Media Styling */
+.contact .container .links .social {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Social Media Sentence */
+.contact .container .links .social h4 {
+    font-family: "Anta", sans-serif;
+    color: #2c4755;
+}
+
+/* Social Media Icons */
+.contact .container .links .social i {
+    margin-left: 10px;
+    color: #2c4755;
+}
+
+@media (max-width: 767px) {
+    .contact .container .links .line,
+    .contact .container .links .mail {
+      font-size: 20px;
+    }
+}
+
+
+
+
+/* ############################# FOOTER STYLING ############################# */
+.footer {
+    padding: 30px;
+    background-color: #2c4755;
+    text-align: center;
+}
+
+/* Footer Heading Styling */
+.footer .container h4{
+    font-family: "Anta", sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Footer Special Heading */
+.footer .container h4 strong {
+    color: #10cab7;
+}
+
+@media (max-width: 767px) {
+    .footer .container h4,
+    .footer .container h4 strong {
+        font-size: 12px;
+    }
+}
