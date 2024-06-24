@@ -414,6 +414,8 @@
 /* ############################# ABOUT SECTION STYLING ############################# */
 .about {
     padding: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 /* About Container Styling */
